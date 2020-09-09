@@ -1,0 +1,239 @@
+:root {
+  --color-background: white;
+  --color-foreground: black;
+  --color-accent-1: #172a3a;
+  --color-accent-2: #004346;
+  --color-accent-3: #09bc8a;
+  --color-accent-4: #508991;
+  --color-accent-l: #75dddd;
+  --color-accent-f: white;
+  --color-warning: #f39237;
+  --color-warning-f: black;
+  --color-error: #d63230;
+  --color-error-f: white;
+
+  /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; */
+  /* font-family: "Inter", "Mplus 1p", sans-serif; */
+  font-family: "Syne", "Mplus 1p", sans-serif;
+  /* font-family: 'Barlow', sans-serif; */
+  /* font-family: 'Work Sans', sans-serif; */
+  /* font-family: 'Hind', sans-serif; */
+  /* font-family: 'Overpass', sans-serif; */
+  /* font-family: 'IBM Plex Sans', sans-serif; */
+  /* font-family: 'Catamaran', sans-serif; */
+  /* font-family: 'Inter', sans-serif; */
+  /* font-family: 'Fira Sans', sans-serif; */
+  /* font-family: 'Open Sans', sans-serif; */
+  /* font-family: 'Montserrat', sans-serif; */
+
+  font-size: 16px;
+
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+body {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+}
+
+/* widgets */
+
+#toast {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: var(--color-background);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-accent-1);
+
+  border-radius: 8px;
+  margin: 8px;
+
+  overflow: hidden;
+}
+
+#toast h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 4px 7px;
+  padding-top: 3px;
+  background: var(--color-accent-1);
+  color: var(--color-accent-f);
+}
+
+#toast .content {
+  padding: 8px;
+  padding-top: 4px;
+}
+
+/* parts of the page */
+
+#content > #title {
+  background: #1c395d;
+  color: white;
+  font-weight: 800;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  padding-top: 8px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#content > #main {
+  display: block;
+  margin-left: 24px;
+}
+
+#content > #main #now-playing {
+  background: var(--color-accent-3);
+  color: white;
+}
+
+#now-playing > .title {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 8px;
+}
+
+#now-playing .row {
+  align-content: stretch;
+  padding: 8px;
+  padding-top: 0;
+  padding-right: 0;
+}
+
+#now-playing .row > .album-art {
+  width: 48px;
+  height: 48px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+#now-playing .row > .album-text {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  flex-grow: 1;
+
+  padding-left: 8px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+#now-playing .row > .album-text::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+
+  background: linear-gradient(to right, transparent, var(--color-accent-3));
+}
+
+#now-playing .album-text .title {
+  font-size: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#now-playing .album-text .artist {
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* views */
+
+#views .switcher {
+  background: var(--color-accent-2);
+  color: var(--color-accent-f);
+
+  display: flex;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#views .switcher > a {
+  display: block;
+  flex-grow: 1;
+  justify-content: stretch;
+  align-items: stretch;
+
+  margin: 4px;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 4px 8px 8px;
+  border-radius: 8px 8px 0 0;
+
+  color: unset;
+
+  text-align: center;
+  text-decoration: none;
+}
+
+#views .switcher > a:last-child {
+  margin-right: 4px;
+}
+
+#views .switcher > a:hover {
+  background: var(--color-accent-4);
+}
+
+#views .switcher > a:active,
+#views .switcher > a.active {
+  background: var(--color-background);
+  color: var(--color-accent-2);
+}
+
+#library {
+
+}
+
+#library > input#library-search {
+  background: unset;
+  font: unset;
+  width: 100%;
+  outline: unset;
+  padding: 4px 8px;
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  
+  border: none;
+  border-bottom: 1px solid var(--color-accent-4);
+  border-radius: unset;
+}
+
+#no-requests {
+  text-align: center;
+}

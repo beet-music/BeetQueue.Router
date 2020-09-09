@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello world!!</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body>
+    <div id="content">
+      <div id="title">Raresh's Birthday Party</div>
+      <div id="main">
+        <div id="now-playing">
+          <div class="title">Now Playing</div>
+          <div class="row">
+            <img class="album-art" src="/assets/example.png" alt="Album Art" />
+            <div class="album-text">
+              <div class="title">She's a Maniac</div>
+              <div class="artist">Phone Calls from Home</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="views">
+          <div class="switcher">
+            <a href="#library" class="active">Library</a>
+            <a href="#queue">Queue</a>
+          </div>
+
+          <div id="library">
+            <input
+              type="search"
+              name="search"
+              id="library-search"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="visible">
+      <h1>Already in Queue</h1>
+      <div class="content">
+        The song you've selected is already in the queue at position #50.
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "outDir": "dist",
+        "alwaysStrict": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "module": "CommonJS",
+        "pretty": true,
+        "sourceMap": true
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx"
+    ]
+}
