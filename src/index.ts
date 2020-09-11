@@ -9,11 +9,9 @@ app.set("view engine", "ejs");
 app.use("/assets", AssetsRouter);
 
 app.get("/", (req, res) => {
-  res.render("test", { name: "Raresh" });
-})
-
-app.listen(port, () => {
-  console.log(`Listening to http://localhost:${port}`);
+    res.render("test", { name: "Raresh" });
 });
 
-
+app.listen(port, () => {
+    console.log(`Listening to http://localhost:${port}`);
+});
