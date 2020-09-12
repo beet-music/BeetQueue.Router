@@ -12,7 +12,7 @@ export default function makeError(message: string): ErrorResponse {
 
 export function notImplementedError(): ErrorResponse {
     return {
-        id: 255,
+        id: 501,
         message: "Not implemented",
     };
 }
